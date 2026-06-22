@@ -100,7 +100,7 @@ section {
 }
 .coluna-sobre h1{
     color: var(--cor-verde-secundario);
-    text-shadow: 2px 2px 5px black;
+    text-shadow: 2px 2px 5px var(--cor-verde-secundario);
     font-size: 100px;
 }
 .coluna-sobre h3{
@@ -239,12 +239,36 @@ section {
     margin-bottom: 10px;
 }
 #futebol{
-    background: linear-gradient(
+    /* background: linear-gradient(
         to bottom,
         #f4eee6,
         #FAF7F2
-        );
+        );  */
     padding-bottom: 30px;
+    background-image: url(assets/estadio.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat
+}
+#futebol {
+    padding-bottom: 30px;
+    background-image: url(assets/estadio.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+#futebol::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6); /* ESCURECE A IMAGEM */
+    z-index: 0;
+}
+
+#futebol > * {
+    position: relative;
 }
 .futebol-container{
     display: flex;
