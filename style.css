@@ -6,12 +6,14 @@
 }
 
 :root{
-    --cor-fundo: #F4E4BC;
-    --cor-texto: #4A3728;
-    --cor-titulo: #d49b09;
-    --cor-destaques: #8B1E1E;
-    --cor-detalhes: #8C6239;
-    --cor-verde: #006607;
+    --cor-creme: #FAF7F2;
+    --cor-fundo: #F4EEE6;
+    --cor-exto: #2D2D2D;
+    --cor-destaques: #DA0000;
+    --cor-dourado: #C9A86A;
+    --cor-verde: #1F5A38;
+    --cor-verde-secundario: #4F7A56;
+    --cor-verde-claro: #C8D9C2;
 
 }
 h1{
@@ -25,6 +27,8 @@ body{
     background-color: var(--cor-fundo);
     color: var(--cor-texto);
 }
+
+
 .menu {
     display: flex;
     justify-content: center;
@@ -33,7 +37,7 @@ body{
 }
 
 .menu a {
-    color: var(--cor-titulo);
+    color: var(--cor-verde);
     font-size: 1.3rem;
     font-weight: 2px;
 }
@@ -56,30 +60,38 @@ section {
     min-height: 100vh;
 }
 
-
-
-
-
-
-
-
 .cabecalho{
     padding: 5px 5%;
     display: flex;
     justify-content: space-between;
-    position: fixed;   
+    position: fixed;  
     top: 0;            
-    left: 0;           
+    left: 0;          
     width: 100%;
     height: 100px;
     z-index: 1;
-    background-color: var(--cor-destaques);
-    color: var(--cor-titulo);
+    background-color: var(--cor-creme);
+    color: var(--cor-verde);
+    flex-wrap: nowrap;
+}
+.nome{
+    display: flex;
+    flex-direction: row;
+    width: 280px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cabecalho h1{
+    font-size: 50px;
+}
+.cabecalho img{
+    width: 150px;
 }
 #inicio{
     min-height: 100vh;
     padding: 130px 5% 20px 5%;
-    background-image: url(assets/por\ do\ sol.jpg);
+    background-image: url(assets/foto_inicial.png);
     background-size: cover;
     display: flex;
     align-items: center;
@@ -87,50 +99,96 @@ section {
     background-repeat: no-repeat;
 }
 .coluna-sobre h1{
-    color: var(--cor-fundo);
-    text-shadow: 2px 2px 4px rgba(75, 1, 1, 0.86);
-    font-size: 60px;
+    color: var(--cor-verde-secundario);
+    text-shadow: 2px 2px 5px black;
+    font-size: 100px;
 }
 .coluna-sobre h3{
-    color: var(--cor-fundo);
-    text-shadow: 2px 2px 4px rgb(75, 1, 1);
+    color: var(--cor-verde-secundario);
+    text-shadow: 1px 1px 2px black;
     font-size: 30px;
     /*LETRA CURSIVA*/
 }
 .coluna-sobre p{
-    color: var(--cor-fundo);
-    text-shadow: 2px 2px 4px rgba(75, 1, 1, 0.86);
+    color: var(--cor-verde-secundario);
+    text-shadow: 1px 1px 2px black;
 }
 #historia{
     min-height: 100vh;
+    width: 100vw;
     padding: 130px 5% 20px 5%;
     background-size: cover;
     display: flex;
-    align-items: center;
+    align-items:center;
+    justify-content: space-between;
 }
 #historia .col-historia{
-    width: 50%;
-    height: 500px;
+    width: 48%;
+    height: 550px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    padding: 10px 5px;
 }
-.col-historia .row-historia{
+
+#historia .col-historia h1{
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.dos-cards{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    height: 200px;
+    margin-top: 40px;
+}
+.card-historia{
+    width: 23.5%;
+    /* height: 290px; */
+    background-color: var(--cor-dourado);
+    color: var(--cor-creme);
+    border-radius: 10px;
+    border: 1px solid #a28857;
+}
+.card-historia h2{
+    font-size: 14pt;
+}
+
+.card-historia p{
+    font-size: 12pt;
+    margin-top: 15px;
+    margin-left: 5px; 
+}
+
+#historia .col-historia figure {
+    height: 40%;
     width: 100%;
-    height: 150px;
 }
+
+
+
+.img-historia{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
 #cultura{
     min-height: 100vh;
     padding: 130px 5% 20px 5%;
     background-size: cover;
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    background-color: var(--cor-creme);
+    color: var(--cor-exto);
 }
 #cultura .col-cultura{
-    width: 50%;
+    width: 48%;
     height: 500px;
 }
-.col-cultura .row-cultura{
-    width: 100%;
-    height: 150px;
-}
+
 #paisagens {
     min-height: 100vh;
     padding: 130px 5% 20px 5%;
@@ -145,7 +203,12 @@ section {
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
+}
 
+.row-cultura img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
 }
 .col-paisagens .quatro-paisagens{
     height: 65%;
@@ -174,4 +237,69 @@ section {
     width: 49%;
     height: 90%;
     margin-bottom: 10px;
+}
+#futebol{
+    background: linear-gradient(
+        to bottom,
+        #f4eee6,
+        #FAF7F2
+        );
+    padding-bottom: 30px;
+}
+.futebol-container{
+    display: flex;
+    width: 90%;
+    max-width: 1500px;
+    margin: 10px auto;
+    display: flex;
+    gap: 2%;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 40px;
+    padding-top: 0;
+
+}
+.card{
+    width: 250px;
+    min-height: 400px;
+    background-color: var(--cor-fundo);
+    border: 1px solid var(--cor-texto);
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+.titulo-futebol{
+    text-align: center;
+    font-size: 100px;
+}
+.card img {
+    width: 150px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
+
+}
+.titulo-futebol h1{
+    color: #1F5A38;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.15);
+}
+.card h2{
+    font-size: 20px;
+    color: black;
+}
+.card p{
+    font-size: 15px;
+    color: black;
+}
+.card .imagem{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* Efeito ao passar o mouse */
+.card:hover {
+  transform: translateY(-10px); /* levanta o card */
+  box-shadow: 0 15px 25px rgba(0,0,0,0.2); /* sombra mais intensa */
+  transition: all 0.3s ease;
 }
