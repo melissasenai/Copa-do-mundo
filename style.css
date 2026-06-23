@@ -10,14 +10,14 @@
     --cor-fundo: #F4EEE6;
     --cor-texto: #124125;
     --cor-destaques: #DA0000;
-    --cor-dourado: #C9A86A;
+    --cor-dourado: #cbb284;
     --cor-verde: #1F5A38;
     --cor-verde-secundario: #4F7A56;
     --cor-verde-claro: #C8D9C2;
 }
 
 h1{
-    font-size: 40px;
+    font-size: 60px;
 }
 
 p{
@@ -70,7 +70,7 @@ section {
     left: 0;          
     width: 100%;
     height: 100px;
-    z-index: 1;
+    z-index: 1000;
     background-color: var(--cor-creme);
     color: var(--cor-verde);
     flex-wrap: nowrap;
@@ -130,6 +130,8 @@ section {
     display: flex;
     align-items:center;
     justify-content: space-between;
+    background: linear-gradient(to bottom, #fffdfb, #f7eee4);
+    padding: 60px 20px;
 }
 
 #historia .col-historia{
@@ -193,8 +195,12 @@ section {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: var(--cor-creme);
+    background: linear-gradient(to bottom, #f7eee4, #ecdcca);
+    padding: 60px 20px;
     color: var(--cor-exto);
+}
+.paragrafo{
+    margin-top: 15px;
 }
 
 #cultura .col-cultura{
@@ -208,6 +214,8 @@ section {
     background-size: cover;
     display: flex;
     align-items: center;
+    background: linear-gradient(to bottom, #ecdcca, #ecdcca);
+    padding: 60px 20px;
 }
 
 #paisagens .col-paisagens{
@@ -227,11 +235,11 @@ section {
 }
 
 .col-paisagens .quatro-paisagens{
-    height: 65%;
+    height: 70%;
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
+    align-items: center ;
     justify-content: center;
 }
 
@@ -273,11 +281,12 @@ section {
     position: absolute;
     inset: 0;
     background: rgba(0, 0, 0, 0.6); /* ESCURECE A IMAGEM */
-    z-index: 0;
+    z-index: 1;
 }
 
 #futebol > * {
     position: relative;
+    z-index: 2;
 }
 
 .futebol-container{
@@ -306,6 +315,7 @@ section {
 .titulo-futebol{
     text-align: center;
     font-size: 100px;
+    color: var(--cor-fundo);
 }
 
 .card img {
@@ -345,4 +355,75 @@ section {
   transform: translateY(-10px); /* levanta o card */
   box-shadow: 0 15px 25px rgba(0,0,0,0.2); /* sombra mais intensa */
   transition: all 0.3s ease;
+}
+#curiosidades{
+    height: 1100px;
+    background-color: #f7eee4;
+    background-image: url(assets/fundo.png);
+    background-size: 2300px;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+.row-curiosidades{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.titulo-curiosidades{
+    color: var(--cor-texto);
+    font-size: 100px;
+}
+.curiosidades-container{
+    display: flex;
+    width: 90%;
+    height: 700px;
+    max-width: 1500px;
+    margin: 10px auto;
+    display: flex;
+    gap: 2%;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 40px;
+    padding-top: 0;
+}
+.card-curiosidades{
+    display: flex;
+    justify-content:start;
+    width: 250px;
+    height: 280px;
+    background-color: var(--cor-fundo);
+    border: 1px solid var(--cor-texto);
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 15px;
+    flex-direction: column;
+}
+.card-curiosidades p{
+    margin-top: 5px;
+}
+
+
+.card-curiosidades{
+    transform: translateY(-10px); /* levanta o card */
+    box-shadow: 0 15px 25px rgba(0,0,0,0.2); /* sombra mais intensa */
+    transition: all 0.3s ease;
+}
+
+footer{
+    background-color:var(--cor-fundo);
+    padding: 5px 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+footer p {
+    font-size: 18px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color:var(--cor-verde);
+    font-weight: 700;
+
 }
